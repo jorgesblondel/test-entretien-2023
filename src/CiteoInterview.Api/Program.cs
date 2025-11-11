@@ -12,7 +12,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<ShopDbContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("Shop"), sqlServerOptionsAction: sqlOptions =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ShopDb"), sqlServerOptionsAction: sqlOptions =>
     {
         sqlOptions.EnableRetryOnFailure(
             maxRetryCount: 5,
